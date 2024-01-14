@@ -1,30 +1,34 @@
 {
-  "name": "strapi",
-  "private": true,
+  "name": "strapi-911rs-ch",
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "private": true,
+  "description": "Headless CMS for 911rs.ch",
+  "license": "MIT",
+  "author": {
+    "name": "wetteyve"
+  },
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
     "build": "strapi build",
+    "dev": "railway run yarn run strapi develop",
+    "start": "strapi start",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-i18n": "4.17.0",
     "@strapi/plugin-users-permissions": "4.17.0",
     "@strapi/provider-upload-cloudinary": "4.17.0",
     "@strapi/strapi": "4.17.0",
-    "pg": "8.11.3"
+    "pg": "8.11.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   },
-  "author": {
-    "name": "A Strapi developer"
+  "devDependencies": {},
+  "engines": {
+    "node": "18"
   },
   "strapi": {
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
-  },
-  "engines": {
-    "node": "20"
-  },
-  "license": "MIT"
+  }
 }

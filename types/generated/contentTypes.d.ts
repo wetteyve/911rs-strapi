@@ -362,6 +362,35 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
+    linkage: Attribute.Enumeration<['navbar', 'footer']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'navbar'>;
+    linkage_position: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.DefaultTo<'navbar_099'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -778,6 +807,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::page.page': ApiPagePage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

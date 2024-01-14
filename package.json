@@ -1,11 +1,11 @@
 {
-  "name": "strapi",
+  "name": "strapi-911rs-ch",
   "version": "0.1.0",
   "private": true,
-  "description": "A Strapi application",
+  "description": "Headless CMS for 911rs.ch",
   "license": "MIT",
   "author": {
-    "name": "A Strapi developer"
+    "name": "wetteyve"
   },
   "scripts": {
     "build": "strapi build",

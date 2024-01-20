@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_pages_leistungen_pages",
+  "info": {
+    "displayName": "leistungen_page",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "representation": {
+      "type": "string",
+      "default": "LEISTUNGEN_PAGE",
+      "required": true,
+      "regex": "^LEISTUNGEN_PAGE$"
+    },
+    "header_picture": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "lead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-building-blocks.lead",
+      "required": true
+    },
+    "bildstrecken_lead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-building-blocks.lead",
+      "required": true
+    },
+    "bildstrecken_collection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-building-blocks.bildstrecken",
+      "required": true
+    }
+  }
+}

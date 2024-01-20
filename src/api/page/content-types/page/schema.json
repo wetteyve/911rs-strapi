@@ -33,6 +33,27 @@
       "default": "navbar_099",
       "regex": "^(navbar_(0\\d{2})|footer_(1\\d{2}))$",
       "unique": true
+    },
+    "navigation_title": {
+      "type": "string",
+      "required": true,
+      "regex": "^[A-ZÜÄÖ][a-zA-Z0-9\\s]*$",
+      "minLength": 2
+    },
+    "seo_settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta-data.seo-settings"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "pages.about-page",
+        "pages.home-page",
+        "pages.leistungen-page"
+      ],
+      "required": true,
+      "max": 1
     }
   }
 }

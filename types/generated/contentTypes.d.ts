@@ -382,6 +382,19 @@ export interface ApiPagePage extends Schema.CollectionType {
       Attribute.Required &
       Attribute.Unique &
       Attribute.DefaultTo<'navbar_099'>;
+    navigation_title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 2;
+      }>;
+    seo_settings: Attribute.Component<'meta-data.seo-settings'>;
+    content: Attribute.DynamicZone<
+      ['pages.about-page', 'pages.home-page', 'pages.leistungen-page']
+    > &
+      Attribute.Required &
+      Attribute.SetMinMax<{
+        max: 1;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &

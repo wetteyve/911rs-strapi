@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_building_blocks_leads",
+  "info": {
+    "displayName": "lead",
+    "icon": "feather"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Lead Titel"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

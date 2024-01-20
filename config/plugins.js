@@ -29,9 +29,9 @@ module.exports = ({ env }) => ({
       },
       strategy: {
         keysPrefix: "911rs",
-        maxAge: 3600000,
+        maxAge: 2592000000, // 30 days
         debug: false,
-        hitpass: false,
+        hitpass: false, // also cache requests with Authorization header set
         contentTypes: [
           // list of Content-Types UID to cache
           "api::page.page",

@@ -7,17 +7,13 @@
   },
   "options": {},
   "attributes": {
-    "representation": {
-      "type": "string",
-      "default": "ABOUT_PAGE",
-      "required": true,
-      "regex": "^ABOUT_PAGE$"
-    },
     "header_picture": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "lead": {
       "type": "component",
@@ -26,16 +22,20 @@
       "required": true
     },
     "lead_picture": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "impressionen": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

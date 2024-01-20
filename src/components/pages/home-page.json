@@ -7,19 +7,13 @@
   },
   "options": {},
   "attributes": {
-    "representation": {
-      "type": "string",
-      "default": "HOME_PAGE",
-      "regex": "^HOME_PAGE$",
-      "required": true
-    },
     "header_picture": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "lead": {
       "type": "component",
@@ -28,12 +22,12 @@
       "required": true
     },
     "lead_picture": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "beitrag_lead": {
       "type": "component",
@@ -48,12 +42,12 @@
       "required": true
     },
     "impressionen": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

@@ -77,9 +77,6 @@ export interface PagesAboutPage extends Schema.Component {
     description: '';
   };
   attributes: {
-    representation: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'ABOUT_PAGE'>;
     header_picture: Attribute.Media & Attribute.Required;
     lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
     lead_picture: Attribute.Media & Attribute.Required;
@@ -95,9 +92,6 @@ export interface PagesHomePage extends Schema.Component {
     description: '';
   };
   attributes: {
-    representation: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'HOME_PAGE'>;
     header_picture: Attribute.Media & Attribute.Required;
     lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
     lead_picture: Attribute.Media & Attribute.Required;
@@ -120,9 +114,6 @@ export interface PagesLeistungenPage extends Schema.Component {
     description: '';
   };
   attributes: {
-    representation: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'LEISTUNGEN_PAGE'>;
     header_picture: Attribute.Media & Attribute.Required;
     lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
     bildstrecken_lead: Attribute.Component<'page-building-blocks.lead'> &

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_page_building_blocks_beitrags",
+  "info": {
+    "displayName": "beitrag",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "external_link": {
+      "type": "string",
+      "regex": "^https?:\\/\\/[^\\s\\/$.?#].[^\\s]*$"
+    },
+    "lead_picture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

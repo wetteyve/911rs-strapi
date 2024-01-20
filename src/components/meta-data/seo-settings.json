@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_meta_data_seo_settings",
+  "info": {
+    "displayName": "seo_settings",
+    "icon": "earth",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "allow_indexing": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 60
+    },
+    "description": {
+      "type": "text",
+      "minLength": 2,
+      "maxLength": 160
+    },
+    "keywords": {
+      "type": "string",
+      "minLength": 2
+    }
+  }
+}

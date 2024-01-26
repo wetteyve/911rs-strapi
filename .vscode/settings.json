@@ -1,0 +1,17 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "vscode-icons",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.printWidth": 140,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "typescriptHero.imports.organizeOnSave": true,
+  "typescriptHero.imports.multiLineWrapThreshold": 140,
+  "less.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}

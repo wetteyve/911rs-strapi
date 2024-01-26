@@ -1,9 +1,9 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: '/'
+    directory: "/"
     schedule:
-      interval: daily
+      interval: monthly
     groups:
       strapi:
         patterns:

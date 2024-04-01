@@ -9025,22 +9025,22 @@ strapi-plugin-populate-deep@^3.0.1:
   resolved "https://registry.yarnpkg.com/strapi-plugin-populate-deep/-/strapi-plugin-populate-deep-3.0.1.tgz#cd8f9853dc6e9a1859bdcc0176323a29bd2b8509"
   integrity sha512-7t1bPPBN1AGKZlFT/6qsqmwgd7SzTA9CNzEBSzeYEjL/e0GKD2lf4wF11C2vMkfsQW2GhRAXZQRCGlLnV2XHFQ==
 
-strapi-plugin-rest-cache@^4.2.8:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/strapi-plugin-rest-cache/-/strapi-plugin-rest-cache-4.2.8.tgz#4f8f014d09281d82294fe578af7d424bddb4eaf2"
-  integrity sha512-alAcIp1FOpHCHvqYV8ZJDVtbRohNwlvZqnCcewA04hLbLS3N+oB3DC6JSQSL3ur0XEcm+YnaOkw8n95DoLRzsg==
+strapi-plugin-rest-cache@^4.2.9:
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-rest-cache/-/strapi-plugin-rest-cache-4.2.9.tgz#f90f0e5508472438970fe5be4cc3fc04d96e753a"
+  integrity sha512-v9g2sCgxloX3HHBk1CIDuVPnSXVMstEYhbCDi7ZUsCRCZltzIJv6Unonc65vigopzKKYUVJnwEJQj0o/LdrLDg==
   dependencies:
     "@koa/router" "^10.1.1"
     chalk "^4.1.2"
     debug "^4.3.4"
     lodash "^4.17.21"
     path "^0.12.7"
-    strapi-provider-rest-cache-memory "^4.2.8"
+    strapi-provider-rest-cache-memory "^4.2.9"
 
-strapi-provider-rest-cache-memory@^4.2.8:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/strapi-provider-rest-cache-memory/-/strapi-provider-rest-cache-memory-4.2.8.tgz#9e3f34b8017b6870e341df80ab2abdd4ca665821"
-  integrity sha512-kqGr+5D0/UvvUrHDCmAFGOJxRKRbYDcWLRGye/lgPInHfD3Bh0gpDPXyvk7+tb6OwpbdkLWrV6GGO503p1nRAA==
+strapi-provider-rest-cache-memory@^4.2.9:
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/strapi-provider-rest-cache-memory/-/strapi-provider-rest-cache-memory-4.2.9.tgz#29b8152fc26c509b286e81388f8a07ca26f679c4"
+  integrity sha512-BLumxd6OwLqmlQI5HqauN6c86ig59Co8jUHTlFC5waytQM5zyOZnIt5Ody4Qdc6yeMi726EFyI7yUF7L/DaQ9A==
   dependencies:
     cache-manager "^3.6.0"
 

@@ -37,7 +37,7 @@ export interface PageBuildingBlocksBeitrag extends Schema.Component {
   attributes: {
     title: Attribute.String & Attribute.Required;
     external_link: Attribute.String;
-    lead_picture: Attribute.Media & Attribute.Required;
+    lead_picture: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -51,7 +51,7 @@ export interface PageBuildingBlocksBildstrecken extends Schema.Component {
     title: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'neue Bildstrecke'>;
-    bilder: Attribute.Media & Attribute.Required;
+    bilder: Attribute.Media<'images', true> & Attribute.Required;
   };
 }
 
@@ -77,10 +77,10 @@ export interface PagesAboutPage extends Schema.Component {
     description: '';
   };
   attributes: {
-    header_picture: Attribute.Media & Attribute.Required;
+    header_picture: Attribute.Media<'images'> & Attribute.Required;
     lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
-    lead_picture: Attribute.Media & Attribute.Required;
-    impressionen: Attribute.Media & Attribute.Required;
+    lead_picture: Attribute.Media<'images'> & Attribute.Required;
+    impressionen: Attribute.Media<'images', true> & Attribute.Required;
   };
 }
 
@@ -92,9 +92,9 @@ export interface PagesHomePage extends Schema.Component {
     description: '';
   };
   attributes: {
-    header_picture: Attribute.Media & Attribute.Required;
+    header_picture: Attribute.Media<'images'> & Attribute.Required;
     lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
-    lead_picture: Attribute.Media & Attribute.Required;
+    lead_picture: Attribute.Media<'images'> & Attribute.Required;
     beitrag_lead: Attribute.Component<'page-building-blocks.lead'> &
       Attribute.Required;
     beitrag_collection: Attribute.Component<
@@ -102,7 +102,7 @@ export interface PagesHomePage extends Schema.Component {
       true
     > &
       Attribute.Required;
-    impressionen: Attribute.Media & Attribute.Required;
+    impressionen: Attribute.Media<'images', true> & Attribute.Required;
   };
 }
 
@@ -114,7 +114,7 @@ export interface PagesLeistungenPage extends Schema.Component {
     description: '';
   };
   attributes: {
-    header_picture: Attribute.Media & Attribute.Required;
+    header_picture: Attribute.Media<'images'> & Attribute.Required;
     lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
     bildstrecken_lead: Attribute.Component<'page-building-blocks.lead'> &
       Attribute.Required;

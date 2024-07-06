@@ -20,7 +20,7 @@
     "@strapi/strapi": "4.25.2",
     "pg": "8.12.0",
     "react": "18.3.1",
-    "react-dom": "18.2.0",
+    "react-dom": "18.3.1",
     "react-router-dom": "5.3.4",
     "strapi-plugin-populate-deep": "^3.0.1",
     "strapi-plugin-rest-cache": "^4.2.9",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {},
   "engines": {
-    "node": ">=20"
+    "node": "20"
   },
   "strapi": {
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"

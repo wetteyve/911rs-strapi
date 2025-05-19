@@ -21,14 +21,6 @@
       "component": "page-building-blocks.lead",
       "required": true
     },
-    "lead_picture": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "beitrag_lead": {
       "type": "component",
       "repeatable": false,

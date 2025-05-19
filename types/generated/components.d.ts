@@ -94,7 +94,6 @@ export interface PagesHomePage extends Schema.Component {
   attributes: {
     header_picture: Attribute.Media<'images'> & Attribute.Required;
     lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
-    lead_picture: Attribute.Media<'images'> & Attribute.Required;
     beitrag_lead: Attribute.Component<'page-building-blocks.lead'> &
       Attribute.Required;
     beitrag_collection: Attribute.Component<

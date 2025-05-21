@@ -21,16 +21,16 @@
       "component": "page-building-blocks.lead",
       "required": true
     },
-    "bildstrecken_lead": {
+    "baugruppen_lead": {
       "type": "component",
       "repeatable": false,
       "component": "page-building-blocks.lead",
       "required": true
     },
-    "bildstrecken_collection": {
+    "baugruppen": {
       "type": "component",
       "repeatable": true,
-      "component": "page-building-blocks.bildstrecken",
+      "component": "page-building-blocks.baugruppe",
       "required": true
     }
   }

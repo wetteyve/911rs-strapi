@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_page_building_blocks_baugruppes",
+  "info": {
+    "displayName": "Baugruppe",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 2
+    }
+  }
+}

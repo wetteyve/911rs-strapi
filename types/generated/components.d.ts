@@ -1,5 +1,107 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface PagesLeistungenPage extends Schema.Component {
+  collectionName: 'components_pages_leistungen_pages';
+  info: {
+    displayName: 'leistungen_page';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    header_picture: Attribute.Media<'images'> & Attribute.Required;
+    lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
+    baugruppen_lead: Attribute.Component<'page-building-blocks.lead'> &
+      Attribute.Required;
+    baugruppen: Attribute.Component<'page-building-blocks.baugruppe', true> &
+      Attribute.Required;
+  };
+}
+
+export interface PagesHomePage extends Schema.Component {
+  collectionName: 'components_pages_home_pages';
+  info: {
+    displayName: 'home_page';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    header_picture: Attribute.Media<'images'> & Attribute.Required;
+    lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
+    beitrag_lead: Attribute.Component<'page-building-blocks.lead'> &
+      Attribute.Required;
+    beitrag_collection: Attribute.Component<
+      'page-building-blocks.beitrag',
+      true
+    > &
+      Attribute.Required;
+    impressionen: Attribute.Media<'images', true> & Attribute.Required;
+  };
+}
+
+export interface PagesAboutPage extends Schema.Component {
+  collectionName: 'components_pages_about_pages';
+  info: {
+    displayName: 'about_page';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    header_picture: Attribute.Media<'images'> & Attribute.Required;
+    lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
+    lead_picture: Attribute.Media<'images'> & Attribute.Required;
+    impressionen: Attribute.Media<'images', true> & Attribute.Required;
+  };
+}
+
+export interface PageBuildingBlocksLead extends Schema.Component {
+  collectionName: 'components_page_building_blocks_leads';
+  info: {
+    displayName: 'lead';
+    icon: 'feather';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Lead Titel'>;
+    description: Attribute.RichText;
+  };
+}
+
+export interface PageBuildingBlocksBeitrag extends Schema.Component {
+  collectionName: 'components_page_building_blocks_beitrags';
+  info: {
+    displayName: 'beitrag';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    external_link: Attribute.String;
+    lead_picture: Attribute.Media<'images'> & Attribute.Required;
+  };
+}
+
+export interface PageBuildingBlocksBaugruppe extends Schema.Component {
+  collectionName: 'components_page_building_blocks_baugruppes';
+  info: {
+    displayName: 'Baugruppe';
+    icon: 'cog';
+    description: '';
+  };
+  attributes: {
+    picture: Attribute.Media<'images'> & Attribute.Required;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 2;
+      }>;
+    description: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 2;
+      }>;
+  };
+}
+
 export interface MetaDataSeoSettings extends Schema.Component {
   collectionName: 'components_meta_data_seo_settings';
   info: {
@@ -28,113 +130,16 @@ export interface MetaDataSeoSettings extends Schema.Component {
   };
 }
 
-export interface PageBuildingBlocksBeitrag extends Schema.Component {
-  collectionName: 'components_page_building_blocks_beitrags';
-  info: {
-    displayName: 'beitrag';
-    icon: 'bulletList';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    external_link: Attribute.String;
-    lead_picture: Attribute.Media<'images'> & Attribute.Required;
-  };
-}
-
-export interface PageBuildingBlocksBildstrecken extends Schema.Component {
-  collectionName: 'components_page_building_blocks_bildstreckens';
-  info: {
-    displayName: 'bildstrecken';
-    icon: 'landscape';
-  };
-  attributes: {
-    title: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'neue Bildstrecke'>;
-    bilder: Attribute.Media<'images', true> & Attribute.Required;
-  };
-}
-
-export interface PageBuildingBlocksLead extends Schema.Component {
-  collectionName: 'components_page_building_blocks_leads';
-  info: {
-    displayName: 'lead';
-    icon: 'feather';
-  };
-  attributes: {
-    title: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'Lead Titel'>;
-    description: Attribute.RichText;
-  };
-}
-
-export interface PagesAboutPage extends Schema.Component {
-  collectionName: 'components_pages_about_pages';
-  info: {
-    displayName: 'about_page';
-    icon: 'link';
-    description: '';
-  };
-  attributes: {
-    header_picture: Attribute.Media<'images'> & Attribute.Required;
-    lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
-    lead_picture: Attribute.Media<'images'> & Attribute.Required;
-    impressionen: Attribute.Media<'images', true> & Attribute.Required;
-  };
-}
-
-export interface PagesHomePage extends Schema.Component {
-  collectionName: 'components_pages_home_pages';
-  info: {
-    displayName: 'home_page';
-    icon: 'link';
-    description: '';
-  };
-  attributes: {
-    header_picture: Attribute.Media<'images'> & Attribute.Required;
-    lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
-    beitrag_lead: Attribute.Component<'page-building-blocks.lead'> &
-      Attribute.Required;
-    beitrag_collection: Attribute.Component<
-      'page-building-blocks.beitrag',
-      true
-    > &
-      Attribute.Required;
-    impressionen: Attribute.Media<'images', true> & Attribute.Required;
-  };
-}
-
-export interface PagesLeistungenPage extends Schema.Component {
-  collectionName: 'components_pages_leistungen_pages';
-  info: {
-    displayName: 'leistungen_page';
-    icon: 'link';
-    description: '';
-  };
-  attributes: {
-    header_picture: Attribute.Media<'images'> & Attribute.Required;
-    lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
-    bildstrecken_lead: Attribute.Component<'page-building-blocks.lead'> &
-      Attribute.Required;
-    bildstrecken_collection: Attribute.Component<
-      'page-building-blocks.bildstrecken',
-      true
-    > &
-      Attribute.Required;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'meta-data.seo-settings': MetaDataSeoSettings;
-      'page-building-blocks.beitrag': PageBuildingBlocksBeitrag;
-      'page-building-blocks.bildstrecken': PageBuildingBlocksBildstrecken;
-      'page-building-blocks.lead': PageBuildingBlocksLead;
-      'pages.about-page': PagesAboutPage;
-      'pages.home-page': PagesHomePage;
       'pages.leistungen-page': PagesLeistungenPage;
+      'pages.home-page': PagesHomePage;
+      'pages.about-page': PagesAboutPage;
+      'page-building-blocks.lead': PageBuildingBlocksLead;
+      'page-building-blocks.beitrag': PageBuildingBlocksBeitrag;
+      'page-building-blocks.baugruppe': PageBuildingBlocksBaugruppe;
+      'meta-data.seo-settings': MetaDataSeoSettings;
     }
   }
 }

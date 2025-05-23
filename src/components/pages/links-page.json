@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pages_links_pages",
+  "info": {
+    "displayName": "links_page",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-building-blocks.baugruppe",
+      "required": true
+    }
+  }
+}

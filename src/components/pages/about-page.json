@@ -7,35 +7,17 @@
   },
   "options": {},
   "attributes": {
-    "header_picture": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "lead": {
+    "about": {
       "type": "component",
       "repeatable": false,
-      "component": "page-building-blocks.lead",
+      "component": "page-building-blocks.baugruppe",
       "required": true
     },
-    "lead_picture": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "impressionen": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+    "car": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-building-blocks.baugruppe",
+      "required": true
     }
   }
 }

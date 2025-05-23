@@ -389,7 +389,12 @@ export interface ApiPagePage extends Schema.CollectionType {
       }>;
     seo_settings: Attribute.Component<'meta-data.seo-settings'>;
     content: Attribute.DynamicZone<
-      ['pages.about-page', 'pages.home-page', 'pages.leistungen-page']
+      [
+        'pages.about-page',
+        'pages.home-page',
+        'pages.leistungen-page',
+        'pages.links-page'
+      ]
     > &
       Attribute.Required &
       Attribute.SetMinMax<

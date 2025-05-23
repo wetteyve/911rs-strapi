@@ -26,7 +26,9 @@
     "strapi-plugin-rest-cache": "^4.2.9",
     "styled-components": "5.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@railway/cli": "^4.5.1"
+  },
   "engines": {
     "node": "20"
   },

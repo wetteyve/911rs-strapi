@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface PagesLinksPage extends Schema.Component {
+  collectionName: 'components_pages_links_pages';
+  info: {
+    displayName: 'links_page';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    links: Attribute.Component<'page-building-blocks.baugruppe'> &
+      Attribute.Required;
+  };
+}
+
 export interface PagesLeistungenPage extends Schema.Component {
   collectionName: 'components_pages_leistungen_pages';
   info: {
@@ -46,10 +59,10 @@ export interface PagesAboutPage extends Schema.Component {
     description: '';
   };
   attributes: {
-    header_picture: Attribute.Media<'images'> & Attribute.Required;
-    lead: Attribute.Component<'page-building-blocks.lead'> & Attribute.Required;
-    lead_picture: Attribute.Media<'images'> & Attribute.Required;
-    impressionen: Attribute.Media<'images', true> & Attribute.Required;
+    about: Attribute.Component<'page-building-blocks.baugruppe'> &
+      Attribute.Required;
+    car: Attribute.Component<'page-building-blocks.baugruppe'> &
+      Attribute.Required;
   };
 }
 
@@ -83,7 +96,7 @@ export interface PageBuildingBlocksBeitrag extends Schema.Component {
 export interface PageBuildingBlocksBaugruppe extends Schema.Component {
   collectionName: 'components_page_building_blocks_baugruppes';
   info: {
-    displayName: 'Baugruppe';
+    displayName: 'Info_block';
     icon: 'cog';
     description: '';
   };
@@ -133,6 +146,7 @@ export interface MetaDataSeoSettings extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'pages.links-page': PagesLinksPage;
       'pages.leistungen-page': PagesLeistungenPage;
       'pages.home-page': PagesHomePage;
       'pages.about-page': PagesAboutPage;

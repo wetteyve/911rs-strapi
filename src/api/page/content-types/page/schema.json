@@ -50,7 +50,8 @@
       "components": [
         "pages.about-page",
         "pages.home-page",
-        "pages.leistungen-page"
+        "pages.leistungen-page",
+        "pages.links-page"
       ],
       "required": true,
       "max": 1

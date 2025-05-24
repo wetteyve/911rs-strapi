@@ -51,6 +51,19 @@ export interface PagesHomePage extends Schema.Component {
   };
 }
 
+export interface PagesAgendaPage extends Schema.Component {
+  collectionName: 'components_pages_agenda_pages';
+  info: {
+    displayName: 'agenda_page';
+    icon: 'clock';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    lead: Attribute.RichText & Attribute.Required;
+    events: Attribute.Component<'page-building-blocks.event', true>;
+  };
+}
+
 export interface PagesAboutPage extends Schema.Component {
   collectionName: 'components_pages_about_pages';
   info: {
@@ -77,6 +90,22 @@ export interface PageBuildingBlocksLead extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Lead Titel'>;
     description: Attribute.RichText;
+  };
+}
+
+export interface PageBuildingBlocksEvent extends Schema.Component {
+  collectionName: 'components_page_building_blocks_events';
+  info: {
+    displayName: 'event';
+    icon: 'calendar';
+  };
+  attributes: {
+    start: Attribute.Date & Attribute.Required;
+    end: Attribute.Date;
+    title: Attribute.String & Attribute.Required;
+    lead: Attribute.String & Attribute.Required;
+    link: Attribute.String;
+    important: Attribute.String;
   };
 }
 
@@ -150,8 +179,10 @@ declare module '@strapi/types' {
       'pages.links-page': PagesLinksPage;
       'pages.leistungen-page': PagesLeistungenPage;
       'pages.home-page': PagesHomePage;
+      'pages.agenda-page': PagesAgendaPage;
       'pages.about-page': PagesAboutPage;
       'page-building-blocks.lead': PageBuildingBlocksLead;
+      'page-building-blocks.event': PageBuildingBlocksEvent;
       'page-building-blocks.beitrag': PageBuildingBlocksBeitrag;
       'page-building-blocks.baugruppe': PageBuildingBlocksBaugruppe;
       'meta-data.seo-settings': MetaDataSeoSettings;

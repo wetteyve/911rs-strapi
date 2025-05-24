@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_pages_agenda_pages",
+  "info": {
+    "displayName": "agenda_page",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "lead": {
+      "type": "richtext",
+      "required": true
+    },
+    "events": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-building-blocks.event"
+    }
+  }
+}

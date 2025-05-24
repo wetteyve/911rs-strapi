@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_page_building_blocks_events",
+  "info": {
+    "displayName": "event",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "start": {
+      "type": "date",
+      "required": true
+    },
+    "end": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "lead": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "important": {
+      "type": "string"
+    }
+  }
+}

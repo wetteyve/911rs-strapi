@@ -393,7 +393,11 @@ export interface ApiPagePage extends Schema.CollectionType {
         'pages.about-page',
         'pages.home-page',
         'pages.leistungen-page',
-        'pages.links-page'
+        'pages.links-page',
+        'pages.agenda-page',
+        'pages.kontakt-page',
+        'pages.impressum-page',
+        'pages.datenschutz-page'
       ]
     > &
       Attribute.Required &

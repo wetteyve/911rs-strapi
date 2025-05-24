@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pages_impressum_pages",
+  "info": {
+    "displayName": "impressum_page",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "impressum": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-building-blocks.baugruppe",
+      "required": true
+    }
+  }
+}

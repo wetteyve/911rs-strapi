@@ -30,6 +30,31 @@ export interface PagesLeistungenPage extends Schema.Component {
   };
 }
 
+export interface PagesKontaktPage extends Schema.Component {
+  collectionName: 'components_pages_kontakt_pages';
+  info: {
+    displayName: 'kontakt_page';
+    icon: 'link';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    lead: Attribute.RichText & Attribute.Required;
+    address: Attribute.RichText & Attribute.Required;
+  };
+}
+
+export interface PagesImpressumPage extends Schema.Component {
+  collectionName: 'components_pages_impressum_pages';
+  info: {
+    displayName: 'impressum_page';
+    icon: 'link';
+  };
+  attributes: {
+    impressum: Attribute.Component<'page-building-blocks.baugruppe'> &
+      Attribute.Required;
+  };
+}
+
 export interface PagesHomePage extends Schema.Component {
   collectionName: 'components_pages_home_pages';
   info: {
@@ -51,11 +76,24 @@ export interface PagesHomePage extends Schema.Component {
   };
 }
 
+export interface PagesDatenschutzPage extends Schema.Component {
+  collectionName: 'components_pages_datenschutz_pages';
+  info: {
+    displayName: 'datenschutz_page';
+    icon: 'link';
+  };
+  attributes: {
+    datenschutz: Attribute.Component<'page-building-blocks.lead'> &
+      Attribute.Required;
+  };
+}
+
 export interface PagesAgendaPage extends Schema.Component {
   collectionName: 'components_pages_agenda_pages';
   info: {
     displayName: 'agenda_page';
-    icon: 'clock';
+    icon: 'link';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -178,7 +216,10 @@ declare module '@strapi/types' {
     export interface Components {
       'pages.links-page': PagesLinksPage;
       'pages.leistungen-page': PagesLeistungenPage;
+      'pages.kontakt-page': PagesKontaktPage;
+      'pages.impressum-page': PagesImpressumPage;
       'pages.home-page': PagesHomePage;
+      'pages.datenschutz-page': PagesDatenschutzPage;
       'pages.agenda-page': PagesAgendaPage;
       'pages.about-page': PagesAboutPage;
       'page-building-blocks.lead': PageBuildingBlocksLead;

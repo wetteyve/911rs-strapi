@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pages_datenschutz_pages",
+  "info": {
+    "displayName": "datenschutz_page",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "datenschutz": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-building-blocks.lead",
+      "required": true
+    }
+  }
+}

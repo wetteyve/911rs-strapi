@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_pages_kontakt_pages",
+  "info": {
+    "displayName": "kontakt_page",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "lead": {
+      "type": "richtext",
+      "required": true
+    },
+    "address": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

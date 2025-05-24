@@ -140,6 +140,7 @@ export interface MetaDataSeoSettings extends Schema.Component {
       Attribute.SetMinMaxLength<{
         minLength: 2;
       }>;
+    previewImage: Attribute.Media<'images'>;
   };
 }
 

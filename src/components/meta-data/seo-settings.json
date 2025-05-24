@@ -25,6 +25,13 @@
     "keywords": {
       "type": "string",
       "minLength": 2
+    },
+    "previewImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

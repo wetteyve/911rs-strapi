@@ -8,8 +8,6 @@
   "prettier.tabWidth": 2,
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
-  "typescriptHero.imports.organizeOnSave": true,
-  "typescriptHero.imports.multiLineWrapThreshold": 140,
   "less.lint.unknownAtRules": "ignore",
   "files.associations": {
     "*.css": "tailwindcss"
